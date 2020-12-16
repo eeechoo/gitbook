@@ -4,7 +4,7 @@ description: 'https://leetcode-cn.com/problems/department-highest-salary/'
 
 # 184. 部门工资最高的员工
 
-## 方法1
+## 方法1: max function
 
 ### 思路
 
@@ -47,8 +47,7 @@ WHERE
         FROM
             Employee
         GROUP BY DepartmentId
-	)
-;
+	);
 
 作者：LeetCode 
 链接：
@@ -151,7 +150,7 @@ Department left join Employee
 join
 ```
 
-## 方法二
+## 方法二: window function
 
 （1）Window Function
 
