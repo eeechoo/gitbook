@@ -1,4 +1,8 @@
-# 183. 部门工资最高的员工
+---
+description: 'https://leetcode-cn.com/problems/department-top-three-salaries/'
+---
+
+# 185. 部门工资前三高的所有员工
 
 ## 思路1：window function
 
@@ -25,5 +29,5 @@ from (SELECT Name,
 where Ranking <= 3;
 ```
 
-
+思路2：
 
