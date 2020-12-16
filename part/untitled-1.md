@@ -29,5 +29,5 @@ from (SELECT Name,
 where Ranking <= 3;
 ```
 
-思路2：
+## 思路2：
 
