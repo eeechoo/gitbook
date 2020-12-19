@@ -48,7 +48,9 @@ with recursive cte as (
 4. 判断 n < 50
 5. 将结果加入到结果集合中
 一直执行到 n = 49 时候
-6. select n+1 生成一行
+6. select n+1 生成一行，select 50 as n
+7. 判断 n < 50 失败
+8. 结束 recursive
 ```
 
 ## 帮助理解的文章：
