@@ -44,7 +44,7 @@ with recursive cte as (
 2. 判断 n < 50
 3. 将这一行加入结果集合中
 根据上次循环生成下次循环的结果
-3. select n+1 生成一行，select 2
+3. select n+1 生成一行，select 2 as n
 4. 判断 n < 50
 5. 将结果加入到结果集合中
 一直执行到 n = 49 时候
