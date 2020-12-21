@@ -67,12 +67,6 @@ https://leetcode-cn.com/problems/department-highest-salary/solution/bu-men-gong-
 | IT         | Max      | 90000  |
 ```
 
-### 参考链接
-
-
-
-
-
 ## 方法一（要不要 left join）
 
  **Employee** 表

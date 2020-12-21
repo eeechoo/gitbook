@@ -14,7 +14,7 @@
 
 这篇文章必须读完，并理解透彻 [https://dev.mysql.com/doc/refman/8.0/en/with.html\#common-table](https://dev.mysql.com/doc/refman/8.0/en/with.html#common-table-expressions-recursive-examples)[expressions-recursive-examples](https://dev.mysql.com/doc/refman/8.0/en/with.html#common-table-expressions-recursive-examples)
 
-## 个人理解：
+## 个人理解一：
 
 recursive CTE 中的 recursive 并不是指 编程中的递归概念，而是应该对应于 循环 这个概念，应该对应于 LOOP，FOR， WHILE 这些循环概念。  
 下面我们来回顾下 For 循环的概念
@@ -53,9 +53,29 @@ with recursive cte as (
 8. 结束 recursive
 ```
 
+## 个人理解二：
+
+**Hierarchical Data Traversal**
+
+![](../.gitbook/assets/capture.png)
+
+其实下面这个 CTE 也可以这样理解：一次生成一行，然后 union 到结果集中。
+
+```sql
+with recursive cte as (
+    select 1 as n
+    union
+    select n+1 from cte where n < 50
+) select * from cte;
+```
+
 ## 帮助理解的文章：
 
 [https://www.essentialsql.com/introduction-common-table-expressions-ctes/](https://www.essentialsql.com/introduction-common-table-expressions-ctes/) [https://www.essentialsql.com/recursive-ctes-explained/](https://www.essentialsql.com/recursive-ctes-explained/)
+
+对这篇文章中的BOM 和 Production 表进行解读。
+
+我分析了半天还是感觉有问题，感觉跟他写错了一样。不知道怎么理解这两个表，哎，不管了。
 
 
 
